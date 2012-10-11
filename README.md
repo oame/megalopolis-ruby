@@ -1,6 +1,6 @@
-# Megalopolis
+# megalopolis-ruby
 
-TODO: Write a gem description
+Megalopolis API wrapper for Ruby.
 
 ## Installation
 
@@ -18,7 +18,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+	#!/usr/bin/env ruby
+	# coding: utf-8
+	
+	require "megalopolis"
+	
+	m = Megalopolis.new("http://megalopolis-provider.com")
+	subject = m.get :log => 150
+	puts subject.first.title
 
 ## Contributing
 
