@@ -1,22 +1,11 @@
 # coding: utf-8
 
-class Hash2 < Hash
-  attr_accessor :hash
-
-  def initialize(hash)
-    super(hash)
-    @hash = hash
-  end
-
+class Hash
   def method_missing(action, *args)
-    return @hash[action.to_s] rescue nil
+    return self[action.to_s] rescue nil
   end
 
-  def params() @hash.keys.map{|k|k.to_sym} ; end
-
-  def to_hash
-    @hash
-  end
+  def params() self.keys.map{|k|k.to_sym} ; end
 end
 
 class Megalopolis
@@ -64,7 +53,7 @@ class Megalopolis
     end
 
     def method_missing(action, *args)
-      return Hash2.new(@novel[action.to_s]) rescue nil
+      return @novel[action.to_s] rescue nil
     end
     
     def params() @novel.keys.map{|k|k.to_sym} ; end
