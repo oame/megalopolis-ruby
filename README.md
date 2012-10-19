@@ -2,6 +2,10 @@
 
 Megalopolis API wrapper for Ruby.
 
+## Requirement
+
+* Ruby 1.9.x
+
 ## Installation
 
 Add this line to your application's Gemfile:
