@@ -1,5 +1,7 @@
 # megalopolis-ruby
 
+[![Build Status](https://secure.travis-ci.org/oame/megalopolis-ruby.png)](http://travis-ci.org/oame/megalopolis-ruby)
+
 Megalopolis API wrapper for Ruby.
 
 ## Requirement
