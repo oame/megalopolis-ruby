@@ -19,8 +19,8 @@ class Megalopolis
   
   def get(args={})
     args[:log] ||= 0
-    if args.has_key?(:key)
-      Novel.new(@base_url, args[:log], args[:key])
+    if args.has_key?(:id)
+      Novel.new(@base_url, args[:log], args[:id])
     else
       Subject.new(@base_url, args[:log])
     end

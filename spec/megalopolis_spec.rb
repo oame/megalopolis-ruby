@@ -6,7 +6,7 @@ require "spec_helper"
 describe Megalopolis, "が #get, :log => 100 を呼ぶ時は" do
   before do
     m = Megalopolis.new("http://coolier.sytes.net/sosowa/ssw_l/")
-    @s = m.get :log => 100
+    @s = m.get :log => 0
   end
   
   it "Megalopolis::Subjectを返すこと" do
@@ -43,9 +43,9 @@ describe Megalopolis, "が #get, :log => 100 を呼ぶ時は" do
 
   it "直接Novelを取得出来ること" do
     log = @s.first.log
-    key = @s.first.key
+    id = @s.first.id
     m = Megalopolis.new("http://coolier.sytes.net/sosowa/ssw_l/")
-    novel = m.get :log => log, :key => key
+    novel = m.get :log => log, :id => id
     novel.class.should == Megalopolis::Novel
   end
 end
