@@ -105,6 +105,7 @@ class Megalopolis
     end
 
     def next_page
+      return nil if @log-1 <= 0
       Subject.new(@base_url, @log-1)
     end
     alias_method :next, :next_page
