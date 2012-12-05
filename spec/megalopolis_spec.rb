@@ -25,7 +25,7 @@ describe Megalopolis, "が #get, :log => 100 を呼ぶ時は" do
     @s.next_page.class.should == Megalopolis::Subject
   end
 
-  it "#prev_pageがMegalopolis::Subjectを返すこと" do
+  it "#next_pageの#prev_pageがMegalopolis::Subjectを返すこと" do
     @s.next_page.prev_page.class.should == Megalopolis::Subject
   end
 

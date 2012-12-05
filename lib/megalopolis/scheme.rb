@@ -1,6 +1,8 @@
 # coding: utf-8
 
 class Megalopolis
+  class NoDocumentError < StandardError; end
+
   class MHash < Hash
     def initialize(params={})
       self.update params
@@ -93,6 +95,7 @@ class Megalopolis
     def fetch_subject(base_url, log)
       page = send_req(File.join(base_url, "#{log}.json"))
       obj = JSON.parse(page)["entries"]
+      raise NoDocumentError, "Requested page is out of range" unless obj
 
       indexes = []
       obj.each do |index|
