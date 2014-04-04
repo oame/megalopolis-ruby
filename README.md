@@ -6,7 +6,7 @@ Megalopolis API wrapper for Ruby.
 
 ## Requirement
 
-* Ruby 1.9.x
+* Ruby 1.9.3 or higher
 
 ## Installation
 
@@ -26,9 +26,9 @@ Or install it yourself as:
 
 	#!/usr/bin/env ruby
 	# coding: utf-8
-	
+
 	require "megalopolis"
-	
+
 	m = Megalopolis.new("http://megalopolis-provider.com")
 	subject = m.get :log => 150
 	puts subject.first.title
